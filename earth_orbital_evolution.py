@@ -1,18 +1,18 @@
 # Written 10/7/17 by dh4gan
 # Reads in output from https://data.giss.nasa.gov/ar5/srorbpar.html
 # From Berger (1978)'s solution for Earth's orbital parameters
+#
 
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Read data from files
 data = np.genfromtxt('Earth_orbital_parameters.txt', skiprows = 6)
-print plt.rcParams.keys()
 
 plt.rcParams['font.size']=18
 plt.rcParams['lines.linewidth']=2
 
-print plt.rcParams.keys()
-
+# Decant data into easier to read arrays
 time = data[:,0]
 ecc = data[:,1]
 obliq = data[:,2]
